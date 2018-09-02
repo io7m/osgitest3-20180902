@@ -34,6 +34,14 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+    <site>
+      <id>io7m.com</id>
+      <name>io7m.com</name>
+      <url>https://example.com/</url>
+    </site>
+  </distributionManagement>
+
   <build>
     <pluginManagement>
       <plugins>
