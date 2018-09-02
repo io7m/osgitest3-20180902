@@ -1,0 +1,15 @@
+language: java
+
+jdk:
+  - oraclejdk9
+
+install: true
+
+script:
+  - mvn --errors clean package
+  - wget https://repo1.maven.org/maven2/biz/aQute/bnd/biz.aQute.bnd/4.0.0/biz.aQute.bnd-4.0.0.jar
+  - java -jar biz.aQute.bnd-4.0.0.jar print target/com.io7m.osgitest3-0.0.1.jar
+
+notifications:
+  irc: "chat.freenode.net#io7m"
+
